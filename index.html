@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/style.css">
+    <title>Weather App</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+        <div class="app-wrapper">
+            <div class="search-box">
+                    <input class="search-bar" type="text" class="form-control" placeholder="Enter a city"/>
+                    <button class="search-button">Search</button>
+                    <button class="current-button">Current</button>
+            </div>
+            <div>
+                <div class="date-time">
+                    Friday 17:17
+                </div>
+                <h1 id="city">Lyon</h1>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <span>22</span><span>°C</span>|<span>°F</span>
+                    <p>Clear sky</p>
+                    <p>Feels like 21°C</p>
+                </div> 
+                <div class="col-8">🌞</div>
+            </div>
+            <div class="row"> 
+                <div class="col-md-4 humidity">
+                    <p>💧</p> 
+                    <p>40%</p>
+                </div>
+                <div class="col-md-4 max-min-temp">
+                     <p>🌡️</p>
+                    <p>23°C - 20°C</p>
+                </div>
+                <div class="col-md-4 wind">
+                    <p>🌬️</p>
+                    <p>7 km/h</p>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p><a href="https://github.com/soniangn/Weather-app" target="_blank">Open-source code</a> by Sonia Nguyen</p>
+        </footer>
+        </div>
+    </div>
+    <script src="src/index.js"></script>
+</body>
+</html>

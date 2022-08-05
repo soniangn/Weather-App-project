@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    max-width: 500px;
+    margin: 50px auto;
+}
+
+.app-wrapper {
+    max-width: 450px;
+    padding: 40px 40px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);}
+
+.search-box {
+    display: flex;
+}
+
+.search-bar {
+    width: 200px;
+    height: 40px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.current-button, .search-button {
+    height: 40px; 
+    border: none;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+.search-button {
+    padding: 2px 15px;
+    font-size: 14px;
+}
+
+.current-button {
+    width: 35px;
+    font-size: 14px;
+    color: linear-gradient(to top, rgb(9, 32, 63) 0%, rgb(83, 120, 149) 100%);
