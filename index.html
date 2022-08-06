@@ -41,43 +41,35 @@
             <i class="fa-solid fa-location-dot"></i>
           </div>
 
-          <div class="weather-main">
-            <div class="date-time">Friday 17:17</div>
-            <h1 id="city">Lyon</h1>
-          </div>
-
-          <div class="row">
-            <div class="weather-basics col-6">
-              <p>Clear sky</p>
-              <p>Feels like 21°C</p>
+          <div class="row weather-main">
+            <div class="main-description col-6">
+              <div class="date-time">Friday 17:17</div>
+              <h1 id="city">Lyon</h1>
+              <p class="sky-description">Clear sky</p>
+              <p class="feels-like">Feels like 21°C</p>
             </div>
-            <div class="col-6">
-              <span id="temperature">22</span><span id="celsius">°C</span>|<span
-                id="fahrenheit"
-                >°F</span
-              >
+            <div class="main-temperature col-6">
               <img
                 class="weather-image"
                 src="https://img.icons8.com/color/48/000000/partly-cloudy-day--v1.png"
               />
+              <span id="temperature">22</span><span id="celsius">°C</span> |
+              <span id="fahrenheit">°F</span>
             </div>
           </div>
 
           <div class="weather-conditions row">
-            <div class="col-md-4 humidity">
+            <div class="col-md-6 humidity">
               <img
+                class="conditions-icons"
                 src="https://img.icons8.com/ultraviolet/40/000000/hygrometer.png"
               />
               <p>40%</p>
             </div>
-            <div class="col-md-4 max-min-temp">
+
+            <div class="col-md-6 wind">
               <img
-                src="https://img.icons8.com/ultraviolet/40/000000/thermometer.png"
-              />
-              <p>23°C - 20°C</p>
-            </div>
-            <div class="col-md-4 wind">
-              <img
+                class="conditions-icons"
                 src="https://img.icons8.com/ultraviolet/40/000000/windsock.png"
               />
               <p>7 km/h</p>
@@ -87,9 +79,12 @@
           <div class="row forecast">
             <div class="col sat">
               <div class="card">
-                <div class="body">
-                  <p>Sat</p>
-                  <p class="sky-icon">☀️</p>
+                <div class="forecast body">
+                  <p class="forecast-day">Sat</p>
+                  <img
+                    class="forecast-icon"
+                    src="https://img.icons8.com/color/48/000000/sun--v1.png"
+                  />
                   <p class="max">33°C</p>
                   <p class="min">20°C</p>
                 </div>
@@ -98,8 +93,11 @@
             <div class="col sun">
               <div class="card">
                 <div class="body">
-                  <p>Sun</p>
-                  <p class="sky">☀️</p>
+                  <p class="forecast-day">Sun</p>
+                  <img
+                    class="forecast-icon"
+                    src="https://img.icons8.com/color/48/000000/sun--v1.png"
+                  />
                   <p class="max">31°C</p>
                   <p class="min">18°C</p>
                 </div>
@@ -108,8 +106,11 @@
             <div class="col mon">
               <div class="card">
                 <div class="body">
-                  <p>Mon</p>
-                  <p class="sky">☀️</p>
+                  <p class="forecast-day">Mon</p>
+                  <img
+                    class="forecast-icon"
+                    src="https://img.icons8.com/color/48/000000/sun--v1.png"
+                  />
                   <p class="max">38°C</p>
                   <p class="min">18°C</p>
                 </div>
@@ -118,8 +119,11 @@
             <div class="col tue">
               <div class="card">
                 <div class="body">
-                  <p>Tue</p>
-                  <p class="sky">☀️</p>
+                  <p class="forecast-day">Tue</p>
+                  <img
+                    class="forecast-icon"
+                    src="https://img.icons8.com/color/48/000000/sun--v1.png"
+                  />
                   <p class="max">32°C</p>
                   <p class="min">20°C</p>
                 </div>
@@ -128,8 +132,11 @@
             <div class="col wed">
               <div class="card">
                 <div class="body">
-                  <p>Wed</p>
-                  <p class="sky">☀️</p>
+                  <p class="forecast-day">Wed</p>
+                  <img
+                    class="forecast-icon"
+                    src="https://img.icons8.com/color/48/000000/sun--v1.png"
+                  />
                   <p class="max">31°C</p>
                   <p class="min">20°C</p>
                 </div>

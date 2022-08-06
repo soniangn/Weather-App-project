@@ -20,6 +20,9 @@ body {
   );
 }
 
+.search-box {
+  margin-bottom: 20px;
+}
 .search-bar {
   width: 250px;
   height: 40px;
@@ -63,48 +66,43 @@ h1 {
   font-size: 38px;
 }
 
-.weather-basics,
-.date-time {
+.sky-description {
+  margin: 0;
+  margin-top: 30px;
+}
+
+.main-description {
   color: #596e79;
 }
 
-.weather-basics p {
-  margin: 0 auto;
+.main-temperature {
+  text-align: center;
 }
 
 #temperature {
   font-size: 70px;
-  line-height: 5px;
+  line-height: 85px;
   color: #385170;
   font-weight: bold;
 }
 
 .weather-image {
+  display: block;
+  margin: 0 auto;
   width: 70px;
 }
 
 .weather-conditions {
-  margin: 25px auto;
+  margin-top: 25px;
+  margin-bottom: 0;
   text-align: center;
   font-size: 16px;
 }
 
-.weather-conditions-icons {
-  font-size: 16px;
-}
-
-.emoji {
+.conditions-icons {
   margin: 5px auto;
-  font-size: 24px;
-}
-
-.fa-wind {
-  color: #9ba6a5;
-  margin-top: 10px;
-}
-
-.day {
-  text-align: center;
+  width: 30px;
+  margin-bottom: 10px;
 }
 
 .card {
@@ -117,10 +115,21 @@ h1 {
   color: #000;
 }
 
+.forecast-day {
+  font-weight: bold;
+  margin: 5px auto;
+}
+
+.forecast-icon {
+  width: 30px;
+  margin: 5px auto;
+}
+
 .max {
-  font-size: 16px;
+  margin: 0 auto;
 }
 
 .min {
-  font-size: 12px;
+  font-size: 14px;
+  color: #596e79;
 }
