@@ -1,112 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/321c3f5b89.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="src/style.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/321c3f5b89.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="wrapper">
-        <div class="container">
+      <div class="container">
         <div class="app-wrapper">
-            <div class="search-box">
-                    <input class="search-bar" type="text" class="form-control" placeholder="Enter a city"/>
-                    <button class="search-button">Search</button>
-                    <i class="fa-solid fa-location-dot"></i>
+          <div class="search-box">
+            <input
+              class="search-bar"
+              type="text"
+              class="form-control"
+              placeholder="Enter a city"
+              autofocus="on"
+            />
+            <button class="search-button">Search</button>
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+
+          <div class="weather-main">
+            <div class="date-time">Friday 17:17</div>
+            <h1 id="city">Lyon</h1>
+          </div>
+
+          <div class="row">
+            <div class="weather-basics col-6">
+              <p>Clear sky</p>
+              <p>Feels like 21°C</p>
             </div>
-            <div class="weather-main">
-                <div class="date-time">
-                    Friday 17:17
-                </div>
-                <h1 id="city">Lyon</h1>
+            <div class="col-6">
+              <span id="temperature">22</span><span id="celsius">°C</span>|<span
+                id="fahrenheit"
+                >°F</span
+              >
+              <img
+                class="weather-image"
+                src="https://img.icons8.com/color/48/000000/partly-cloudy-day--v1.png"
+              />
             </div>
-            <div class="row">
-                <div class="weather-basics col-6">
-                    <p>Clear sky</p>
-                    <p>Feels like 21°C</p>
-                </div> 
-                <div class="col-6">
-                    <span id="temperature">22</span><span id="celsius">°C</span>|<span id="fahrenheit">°F</span>
-                    <span class="weather-image">🌞</span>
+          </div>
+
+          <div class="weather-conditions row">
+            <div class="col-md-4 humidity">
+              <img
+                src="https://img.icons8.com/ultraviolet/40/000000/hygrometer.png"
+              />
+              <p>40%</p>
             </div>
-            <div class="weather-conditions row"> 
-                <div class="col-md-4 humidity">
-                    <p class="emoji">💧</p> 
-                    <p>40%</p>
-                </div>
-                <div class="col-md-4 max-min-temp">
-                     <p class="emoji">🌡️</p>
-                    <p>23°C - 20°C</p>
-                </div>
-                <div class="col-md-4 wind">
-                    <i class="emoji fa-solid fa-wind"></i>
-                    <p>7 km/h</p>
-                </div>
+            <div class="col-md-4 max-min-temp">
+              <img
+                src="https://img.icons8.com/ultraviolet/40/000000/thermometer.png"
+              />
+              <p>23°C - 20°C</p>
             </div>
-            <div class="row forecast">
-                <div class="col day saturday">
-                    <div class="card">
-                        <div class="body">
-                            <p>Sat</p>
-                            <p>🌞</p>
-                            <p>33°C</p>
-                            <p>20°C</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col day sunday">
-                    <div class="card">
-                        <div class="body">
-                            <p>Sun</p>
-                            <p>🌞</p>
-                            <p>33°C</p>
-                            <p>20°C</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col day monday">
-                    <div class="card">
-                        <div class="body">
-                            <p>Mon</p>
-                            <p>🌞</p>
-                            <p>33°C</p>
-                            <p>20°C</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col day tuesday">
-                    <div class="card">
-                        <div class="body">
-                            <p>Tue</p>
-                            <p>🌞</p>
-                            <p>33°C</p>
-                            <p>20°C</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col day wesnesday">
-                    <div class="card">
-                        <div class="body">
-                            <p>Wes</p>
-                            <p>🌞</p>
-                            <p>33°C</p>
-                            <p>20°C</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-md-4 wind">
+              <img
+                src="https://img.icons8.com/ultraviolet/40/000000/windsock.png"
+              />
+              <p>7 km/h</p>
             </div>
+          </div>
+
+          <div class="row forecast">
+            <div class="col sat">
+              <div class="card">
+                <div class="body">
+                  <p>Sat</p>
+                  <p class="sky-icon">☀️</p>
+                  <p class="max">33°C</p>
+                  <p class="min">20°C</p>
+                </div>
+              </div>
+            </div>
+            <div class="col sun">
+              <div class="card">
+                <div class="body">
+                  <p>Sun</p>
+                  <p class="sky">☀️</p>
+                  <p class="max">31°C</p>
+                  <p class="min">18°C</p>
+                </div>
+              </div>
+            </div>
+            <div class="col mon">
+              <div class="card">
+                <div class="body">
+                  <p>Mon</p>
+                  <p class="sky">☀️</p>
+                  <p class="max">38°C</p>
+                  <p class="min">18°C</p>
+                </div>
+              </div>
+            </div>
+            <div class="col tue">
+              <div class="card">
+                <div class="body">
+                  <p>Tue</p>
+                  <p class="sky">☀️</p>
+                  <p class="max">32°C</p>
+                  <p class="min">20°C</p>
+                </div>
+              </div>
+            </div>
+            <div class="col wed">
+              <div class="card">
+                <div class="body">
+                  <p>Wed</p>
+                  <p class="sky">☀️</p>
+                  <p class="max">31°C</p>
+                  <p class="min">20°C</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <footer>
-            <p><a href="https://github.com/soniangn/Weather-app" target="_blank">Open-source code</a> by Sonia Nguyen</p>
+          <p>
+            <a href="https://github.com/soniangn/Weather-app" target="_blank"
+              >Open-source code</a
+            >
+            by Sonia Nguyen
+          </p>
         </footer>
-        </div>
+      </div>
     </div>
     <script src="src/index.js"></script>
-</body>
+  </body>
 </html>
