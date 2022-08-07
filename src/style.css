@@ -69,9 +69,9 @@ h1 {
   font-size: 38px;
 }
 
-.sky-description {
+#sky-description {
   margin: 0;
-  margin-top: 30px;
+  text-transform: capitalize;
 }
 
 .main-description {
@@ -84,6 +84,16 @@ h1 {
 
 .main-temperature {
   display: flex;
+}
+
+.main-temperature .active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+
+.main-temperature .active:hover {
+  text-decoration: none;
 }
 
 #temperature {

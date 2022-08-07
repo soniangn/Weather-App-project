@@ -27,9 +27,9 @@ date.innerHTML = `${day} ${hours}:${minutes}`;
 //Display temperature of searched city
 
 function displayTemperature(response) {
-  let temperature = response.data.main.temp;
+  let temperature = celsiusTemperature;
   let h1Element = document.querySelector("#temperature");
-  h1Element.innerHTML = Math.round(temperature);
+  h1Element.innerHTML = temperature;
 
   let cityElement = document.querySelector("#searched-city");
   cityElement.innerHTML = response.data.name;
@@ -43,6 +43,8 @@ function displayTemperature(response) {
 
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = Math.round(response.data.wind.speed);
+
+  celsiusTemperature = Math.round(response.data.main.temp);
 }
 
 function searchCity(city) {
@@ -60,5 +62,32 @@ function handleSubmit(event) {
 
 let newCity = document.querySelector("#search-box");
 newCity.addEventListener("submit", handleSubmit);
+
+//Convert temperature in Fahrenheit
+function convertFahrenheit(event) {
+  event.preventDefault();
+  let fahrenheitElement = document.querySelector("#temperature");
+  // remove the active class on the celsius unit
+  celsiusUnit.classList.remove("active");
+  fahrenheitUnit.classList.add("active");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  fahrenheitElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function convertCelsius(event) {
+  event.preventDefault();
+  celsiusUnit.classList.add("active");
+  fahrenheitUnit.classList.remove("active");
+  let celsiusElement = document.querySelector("#temperature");
+  celsiusElement.innerHTML = celsiusTemperature;
+}
+
+let celsiusTemperature = null;
+
+let fahrenheitUnit = document.querySelector("#fahrenheit");
+fahrenheitUnit.addEventListener("click", convertFahrenheit);
+
+let celsiusUnit = document.querySelector("#celsius");
+celsiusUnit.addEventListener("click", convertCelsius);
 
 searchCity("Paris");
