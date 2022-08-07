@@ -44,6 +44,12 @@ function displayTemperature(response) {
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = Math.round(response.data.wind.speed);
 
+  let weatherIconElement = document.querySelector("#weather-icon");
+  weatherIconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+
   celsiusTemperature = Math.round(response.data.main.temp);
 }
 
