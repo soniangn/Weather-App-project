@@ -24,6 +24,28 @@ if (minutes < 10) {
 let date = document.querySelector("#date-time");
 date.innerHTML = `${day} ${hours}:${minutes}`;
 
+//Display forecast
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+        <div class="col">
+            <p class="forecast-day">${day}</p>
+            <img class="forecast-icon" src="https://img.icons8.com/color/48/000000/sun--v1.png"/>
+            <p class="forecast-max">31°C</p>
+            <p class="forecast-min">18°C</p>
+        </div>
+      `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 //Display temperature of searched city
 
 function displayTemperature(response) {
@@ -97,3 +119,4 @@ let celsiusUnit = document.querySelector("#celsius");
 celsiusUnit.addEventListener("click", convertCelsius);
 
 searchCity("Paris");
+displayForecast();

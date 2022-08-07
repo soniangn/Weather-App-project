@@ -148,11 +148,11 @@ h1 {
   margin: 5px auto;
 }
 
-.max {
+.forecast-max {
   margin: 0 auto;
 }
 
-.min {
+.forecast-min {
   font-size: 14px;
   color: #596e79;
 }
