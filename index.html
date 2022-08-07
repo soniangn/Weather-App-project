@@ -29,9 +29,9 @@
     <div class="wrapper">
       <div class="container">
         <div class="app-wrapper">
-          <div class="search-box">
+          <form id="search-box">
             <input
-              class="search-bar"
+              id="search-bar"
               type="text"
               class="form-control"
               placeholder="Enter a city"
@@ -39,14 +39,13 @@
             />
             <button class="search-button">Search</button>
             <i class="fa-solid fa-location-dot"></i>
-          </div>
+          </form>
 
           <div class="row weather-main">
             <div class="main-description col-6">
               <div id="date-time"></div>
-              <h1 id="city">Lyon</h1>
-              <p class="sky-description">Clear sky</p>
-              <p class="feels-like">Feels like 21°C</p>
+              <h1 id="searched-city">Toulouse</h1>
+              <p id="sky-description"></p>
             </div>
             <div class="main-temperature col-6">
               <img
@@ -64,7 +63,7 @@
                 class="conditions-icons"
                 src="https://img.icons8.com/ultraviolet/40/000000/hygrometer.png"
               />
-              <p>40%</p>
+              <p><span id="humidity"></span>%</p>
             </div>
 
             <div class="col-md-6 wind">
@@ -72,7 +71,7 @@
                 class="conditions-icons"
                 src="https://img.icons8.com/ultraviolet/40/000000/windsock.png"
               />
-              <p>7 km/h</p>
+              <p><span id="wind">7</span> km/h</p>
             </div>
           </div>
 
