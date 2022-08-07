@@ -78,8 +78,12 @@ h1 {
   color: #596e79;
 }
 
-.main-temperature {
+.main-info {
   text-align: center;
+}
+
+.main-temperature {
+  display: flex;
 }
 
 #temperature {
@@ -87,6 +91,12 @@ h1 {
   line-height: 85px;
   color: #385170;
   font-weight: bold;
+}
+
+.units {
+  position: relative;
+  top: 15px;
+  right: -10px;
 }
 
 .weather-image {
