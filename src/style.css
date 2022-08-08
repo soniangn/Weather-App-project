@@ -26,7 +26,7 @@ body {
 }
 
 #search-bar {
-  width: 200px;
+  width: 255px;
   height: 40px;
   margin-bottom: 20px;
   border: none;
@@ -136,6 +136,13 @@ h1 {
   background-color: #e0ebeb;
   border: none;
   color: #000;
+}
+
+.forecast-each-day {
+  background: rgb(242, 235, 243, 0.4);
+  border-radius: 5px;
+  text-align: center;
+  margin: 5px;
 }
 
 .forecast-day {
