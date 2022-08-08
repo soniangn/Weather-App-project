@@ -163,3 +163,15 @@ h1 {
   font-size: 14px;
   color: #596e79;
 }
+
+footer {
+  max-width: 470px;
+  position: relative;
+  left: 15px;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+footer a {
+  text-decoration: none;
+}
