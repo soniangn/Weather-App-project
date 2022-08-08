@@ -30,6 +30,7 @@ function formatDay(timestamp) {
   return days[day];
 }
 
+//Display forecast
 function displayForecast(response) {
   let forecast = response.data.daily;
 
@@ -63,7 +64,23 @@ function getForecast(coordinates) {
   axios.get(apiUrl).then(displayForecast);
 }
 
-//Display temperature of searched city
+//Display weather of current location
+
+function searchLocation(position) {
+  let apiKey = "cf8b5baa824d961b33e0cb48813022bf";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function getCurrentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(searchLocation);
+}
+
+let currentElement = document.querySelector("#current-location");
+currentElement.addEventListener("click", getCurrentLocation);
+
+//Display weather of searched city
 
 function displayTemperature(response) {
   let temperature = celsiusTemperature;

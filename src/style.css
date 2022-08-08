@@ -34,7 +34,7 @@ body {
   display: inline-block;
 }
 
-.fa-location-dot,
+#current-location,
 .search-button {
   height: 40px;
   border: none;
@@ -49,7 +49,7 @@ body {
   color: white;
 }
 
-.fa-location-dot {
+#current-location {
   width: 35px;
   background-color: #407088;
   color: white;
