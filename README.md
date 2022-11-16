@@ -4,7 +4,9 @@ A weather application made with JavaScript, CSS3 and HTML5
 ## About the Project
 The Weather App was the final project for [SheCodesPlus course](https://www.shecodes.io/workshops).
 
-## Screenshots
+## Weather App
+
+[Weather app](https://deft-gelato-bc8639.netlify.app/)
 
 ## Usage
 Users should be able to:
