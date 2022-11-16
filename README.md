@@ -6,14 +6,23 @@ The Weather App was the final project for [SheCodesPlus course](https://www.shec
 
 ## Weather App
 
-[Weather app](https://deft-gelato-bc8639.netlify.app/)
+Visit the [Weather app](https://deft-gelato-bc8639.netlify.app/)
 
 ## Usage
-Users should be able to:
 
-* Check the current weather and the forecast of the city typed in the input field
-* Check the current weather and the forecast of the user's current location
-* View the current temperature in Celsius or Fahrenheit
+The application can be accessed anywhere.
+
+The user can either:
+* Enter a location into the search bar to look up data for the city and then click on search
+* Click on the My location button and enable the location services in the popup of the browser to see data for your current location
+
+The following data will be shown for the given location:
+* name of the city
+* current temperature in Celsius or Fahrenheit
+* current weather conditions with icon
+* current day and time
+* "feels like" temperature, wind, humidity for the current day
+* six-day forecast minimum and maximum temperatures with weather conditions
 
 ## Built With
 
